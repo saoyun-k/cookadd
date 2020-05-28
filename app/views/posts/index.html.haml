@@ -1,2 +1,86 @@
-%h1 Posts#index
-%p Find me in app/views/posts/index.html.haml
+.top-wrapper
+  .top-header
+    .top-header__content-left
+      %ul
+        %li
+          = link_to "#" do
+            サービス一覧
+    -# .top-header__contents-right
+    .top-header__content-right
+      %ul
+        %li
+          = link_to "#" do
+            新規登録
+        %li
+          = link_to "#" do
+            ログイン
+  .top-header__body
+    .top-header__body-logo
+      .top-header__body-logo-left
+        = link_to "#"  do
+          %i.fas.fa-utensils.fa-3x
+      .top-header__body-title1
+        cookadd
+        -# .top-header__body-title2
+        -#   %br
+        -#   ＃ 美味しいよね給食
+      .top-header__body-logo-right
+        %i.fas.fa-industry.fa-3x
+    .top-header__body-saerch
+      %form.top-header__body-saerch-box
+        %input.saerch-form{placeholder: "料理名・食材名", type: "text"}
+        %button{type: "submit", class:"btn1"}
+          レシピ検索
+    .top-header__body-status
+      .top-header__body-status-loge
+        %ul
+          %li
+            = link_to "#"  do
+              %i.fas.fa-sticky-note.fa-2x
+              %span MYフォルダ
+      .top-header__body-status-loge-right
+        %ul
+          %li
+            = link_to "#" do
+              %button{type: "submit", class:"btn2"}
+                = icon("fas", "edit", class: "icon")
+                %span レシピを書く
+  .main-content__body
+    .main-content__body-title
+    .main-content__body-menu
+      %h1.main-content__body-menu-list
+        レギュラーメニュー
+    .main-content__body-menu-list-images
+      %figure.main-content__body-menu-list-image
+        = link_to image_tag("sozai-01.JPEG")
+        .main-content__body-menu-list-text
+          .title
+            ローストビーフ
+          %span.name
+            by
+          %span
+            ゆり
+      %figure.main-content__body-menu-list-image
+        = link_to image_tag("sozai-02.JPEG")
+        .main-content__body-menu-list-text
+          .title
+            枝豆
+          %span.name
+            by
+          %span
+            さおり
+      %figure.main-content__body-menu-list-image
+        = link_to image_tag("sozai-03.JPEG")
+        .main-content__body-menu-list-text
+          .title
+            卵かけご飯
+          %span.name
+            by
+          %span
+            ひろき
+  .footer__body
+    %p.footer__body-text
+      %span.copyright ©️
+      %span.ad 2020
+      %span.app cookadd
+
