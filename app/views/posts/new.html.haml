@@ -1,0 +1,47 @@
+.top_header
+  = render partial: "posts/shared/top_header"
+.new_wrapper
+  %form
+    .new-body
+      .new-body__content-images
+        .new-body__content-image
+          %label
+            料理画像
+          %span  
+            必須
+        %p.new-body__content-image-text
+          最大５枚までアップロードできます
+        .new-body__content-image-icons
+          %form
+            .input__box1
+              .input__box2
+            -# ここにプレビューのコードを挿入
+          .new-body__content-image-icon
+            = icon('fas', 'camera')
+        -# ここにエラーメッセージを挿入
+      .new-body__content-recipe
+        .new-body__content-recipe__title
+          .new-body__content-recipe__title-name
+            %label
+              料理名
+            %span
+              必須
+          .new-body__content-recipe__title-from
+            %input.new-body__content-recipe__title-from-name
+            -# = f.text_field :product_name, placeholder: "40字まで", maxlength: "40", class: "exhibition__product--name"
+        -# ここにエラーメッセージを挿入
+        .new-body__content-recipe__explanation
+          .new-body__content-recipe__explanation-text
+            %label
+              作り方
+            %span
+              必須
+          .new-body__content-recipe__explanation-form
+            %textarea.new-body__content-recipe__explanation-form-textarea{cols: "60", row: "8", placeholder: "料理の作り方 (必須 1,000文字以内)"}
+            -# = f.text_area :product_information, class: "exhibition--description--text", rows: "8", placeholder: "商品の説明 (必須 1,000文字以内)\n (色、素材、重さ、定価、注意点など)\n\n例) 2010年頃に1万円でこうにゅうしたジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+            .new-body__content-recipe__explanation-form-counter
+              %span.counter 0/1000
+            -# .product_information_alert
+          -# ここにエラーメッセージを挿入
+.top__footer
+  = render partial: "posts/shared/top_footer"

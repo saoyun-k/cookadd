@@ -1,0 +1,224 @@
+.top-header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 17%;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff; 
+  border-bottom: 1px solid #e3dcca;
+  &__content-left {
+    padding: 9px 6px 9px 0;
+    a {
+      font-size: 13px;
+      text-decoration: none;
+      color: #986f4e;
+    }
+  }
+  &__content-right {
+    padding: 9px 6px;
+    ul {
+      display: flex;
+      a {
+        padding-left: 10px;
+        font-size: 13px;
+        text-decoration: none;
+        color: #401c00;
+      }
+    }
+  }
+}
+.top-header__body {
+  width: calc(100vw - 34%);
+  margin: 12px 17% 0;
+  // padding: 0 250px;
+  display: flex;
+  .top-header__body-logo {
+    display: flex;
+    .top-header__body-logo-left {
+      a {
+        color: #1E90FF;
+      }
+    }
+    .top-header__body-title1 {
+      font-size: 35px;
+    }
+    .top-header__body-logo-right {
+      padding: 0 10px;
+      color: #1E90FF;
+    }
+  }
+  .top-header__body-saerch {
+    width: 40%;
+    .saerch-form {
+      width: 70%;
+      height: 35px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      border-radius: 5px;
+      border-color: #d1c6a9;
+    }
+    button {
+      // width: 25%;
+      height: 35px;
+      font-size: 13px;
+      border-radius: 5px;
+      border-color: #d1c6a9;
+    }
+  }
+  .top-header__body-status {
+    display: flex;
+    .top-header__body-status-loge {
+      margin-left: 88px;
+      i {
+        color: #1E90FF;
+      }
+      span {
+        font-size: 12px;
+      }
+      a {
+        display: inline-flexbox;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+  .top-header__body-status-loge-right {
+    button {
+      height: 35px;
+      margin-left: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #aec853;
+      .icon {
+        color: #ffffff;
+      }
+    }
+  }
+}
+// ここから入力フォームです。
+.new_wrapper {
+  height: 100vh;
+  background-color: #f7f3e8;
+  .new-body {
+    padding-top: 50px;
+    .new-body__content-images {
+      max-width: 650px;
+      height: 50%;
+      padding: 40px;
+      margin: 0 auto;
+      border-width: 1px;
+      border-bottom-style: solid;
+      border-color: #cccccc;
+      background-color: #fff;
+      label {
+        font-size: 14px;
+        font-weight: 600;
+        background-color:#fff;
+      }
+      span {
+        padding: 1.5px 4px;
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        background-color: red;
+      }
+      .new-body__content-image-text {
+        margin: 16px 0 16px 0;
+        font-size: 14px;
+      }
+      .new-body__content-image-icons {
+        height: 15vh;
+        border-width: 1px;
+        border-style: dashed;
+        border-color: #cccccc;
+        border-image: initial;
+        background-color: #f2f2f2;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        .new-body__content-image-icon {
+          padding: 45px 0 8px;
+          font-size: 20px;
+        }
+      }
+    }
+    .new-body__content-recipe {
+      max-width: 650px;
+      height: 50%;
+      padding: 40px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-width: 1px;
+      border-bottom-style: solid;
+      border-color: #cccccc;
+      label {
+        font-size: 14px;
+        font-weight: 600;
+        background-color:#fff;
+      }
+      span {
+        padding: 1.5px 4px;
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        background-color: red;
+      }
+      .new-body__content-recipe__title-from {
+        padding-top: 15px;
+        .new-body__content-recipe__title-from-name {
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-family: inherit;
+          font-size: inherit;
+          height: 48px;
+          margin: 0 0 20px 0;
+          outline: none;
+          padding: 0 16px;
+          width: 100%;
+        }
+      }
+      .new-body__content-recipe__explanation {
+        padding-top: 20px;
+        .new-body__content-recipe__explanation-form-textarea {
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          outline: none;
+          display: block;
+          width: 100%;
+          margin-top: 15px;
+          padding: 13px 16px;
+          resize: vertical;
+        }
+        .new-body__content-recipe__explanation-form-counter {
+          text-align: end;
+          .counter {
+            font-size: 8px;
+            font-weight: 500;
+            color: black;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+// ここからフッターです。
+.footer__body {
+  // margin-top: 15%;
+  padding: 30px 0;
+  color: #fff;
+  background-color: #272727;
+  text-align: center;
+  .footer__body-text {
+    font-size: 180%;
+    .copyright {
+      // font-size: 200%;
+    }
+    .ad{
+      font-size: 80%;
+    }
+  }
+
+}
