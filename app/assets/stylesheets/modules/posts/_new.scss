@@ -98,7 +98,7 @@
 }
 // ここから入力フォームです。
 .new_wrapper {
-  height: 100vh;
+  height: 100%;
   background-color: #f7f3e8;
   .new-body {
     padding-top: 50px;
@@ -199,6 +199,55 @@
             color: black;
             background-color: #fff;
           }
+        }
+      }
+    }
+    .new-body__content-post {
+      max-width: 650px;
+      height: 50%;
+      padding: 40px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-width: 1px;
+      border-bottom-style: solid;
+      border-color: #cccccc;
+      .new-body__content-post-listing {
+        padding-top: 30px;
+        line-height: 48px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        button {
+          width: 53%;
+          height: 48px;
+          margin-bottom: 24px;
+          font-size: 17px;
+          font-weight: 600;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          color: #fff;
+          background-color: red;
+          cursor: pointer;
+        }
+      }
+      .new-body__content-post-return {
+        padding-top: 30px;
+        line-height: 48px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        a {
+          width: 53%;
+          height: 48px;
+          margin-bottom: 24px;
+          font-size: 17px;
+          font-weight: 600;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          color: #fff;
+          background-color: red;
+          cursor: pointer;
+          text-decoration: none;
         }
       }
     }
