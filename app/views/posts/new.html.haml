@@ -1,7 +1,7 @@
 .top_header
   = render partial: "posts/shared/top_header"
 .new_wrapper
-  %form
+  = form_with model: @post, local: true do |f| 
     .new-body
       .new-body__content-images
         .new-body__content-image
@@ -11,14 +11,20 @@
             必須
         %p.new-body__content-image-text
           最大５枚までアップロードできます
-        .new-body__content-image-icons
-          %form
-            .input__box1
-              .input__box2
-            -# ここにプレビューのコードを挿入
-          .new-body__content-image-icon
-            = icon('fas', 'camera')
-        -# ここにエラーメッセージを挿入
+        #image-box-1
+          %label.new-body__content-image-icons-0#image-box__container
+            = f.fields_for :images do |i|
+              .input__box1
+                = i.file_field :image, type: 'file', name: "post[images_attributes][][image]", value:"", style: "display:none", id:'img-file'
+                %label{for: "img-file"}
+                  %i.fas.fa-camera
+                  -# = icon('fas', 'camera')
+                -# = i.file_field :image, class: 'new-body__content-images-image'
+              -# ここにプレビューのコードを挿入
+            -# .new-body__content-image-icon
+                  -# %i.fas.fa-camera
+              -# = icon('fas', 'camera')
+          -# ここにエラーメッセージを挿入
       .new-body__content-recipe
         .new-body__content-recipe__title
           .new-body__content-recipe__title-name
@@ -27,7 +33,8 @@
             %span
               必須
           .new-body__content-recipe__title-from
-            %input.new-body__content-recipe__title-from-name
+            = f.text_field :dish_name,placeholder: "40字まで", maxlength: "40", class:"new-body__content-recipe__title-from-name"
+            -# %input.new-body__content-recipe__title-from-name
             -# = f.text_field :product_name, placeholder: "40字まで", maxlength: "40", class: "exhibition__product--name"
         -# ここにエラーメッセージを挿入
         .new-body__content-recipe__explanation
@@ -37,7 +44,8 @@
             %span
               必須
           .new-body__content-recipe__explanation-form
-            %textarea.new-body__content-recipe__explanation-form-textarea{cols: "60", rows: "6", placeholder: "食材と分量を入力してください。 (必須 1,000文字以内)"}
+            = f.text_area :foodstuff,cols: "60", rows: "6", placeholder: "食材と分量を入力してください。 (必須 1,000文字以内)", class:"new-body__content-recipe__explanation-form-textarea"
+            -# %textarea.new-body__content-recipe__explanation-form-textarea{cols: "60", rows: "6", placeholder: "食材と分量を入力してください。 (必須 1,000文字以内)"}
             -# = f.text_area :product_information, class: "exhibition--description--text", rows: "8", placeholder: "商品の説明 (必須 1,000文字以内)\n (色、素材、重さ、定価、注意点など)\n\n例) 2010年頃に1万円でこうにゅうしたジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
             .new-body__content-recipe__explanation-form-counter
               %span.counter 0/1000
@@ -50,7 +58,8 @@
             %span
               必須
           .new-body__content-recipe__explanation-form
-            %textarea.new-body__content-recipe__explanation-form-textarea{cols: "60", rows: "6", placeholder: "料理の作り方 (必須 1,000文字以内)"}
+            = f.text_area :recipe, cols: "60", rows: "6", placeholder: "料理の作り方 (必須 1,000文字以内)", class:"new-body__content-recipe__explanation-form-textarea"
+            -# %textarea.new-body__content-recipe__explanation-form-textarea{cols: "60", rows: "6", placeholder: "料理の作り方 (必須 1,000文字以内)"}
             -# = f.text_area :product_information, class: "exhibition--description--text", rows: "8", placeholder: "商品の説明 (必須 1,000文字以内)\n (色、素材、重さ、定価、注意点など)\n\n例) 2010年頃に1万円でこうにゅうしたジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
             .new-body__content-recipe__explanation-form-counter
               %span.counter 0/1000
@@ -58,7 +67,8 @@
           -# ここにエラーメッセージを挿入
       .new-body__content-post
         .new-body__content-post-listing
-          %button.button{type: "button"}
+          = f.submit "投稿する", class: "button"
+          -# %button.button{type: "button"}
             投稿する
         .new-body__content-post-return
           = link_to root_path do
